@@ -48,4 +48,4 @@ This Python script is a versatile utility designed to organize and sort files wi
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
