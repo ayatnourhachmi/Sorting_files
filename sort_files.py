@@ -1,6 +1,18 @@
 import os
 import shutil
+import calendar
 from datetime import datetime
+
+# convert the numeric month obtained from the file creation date into its corresponding English name.
+
+
+def get_month_name(month_number):
+    try:
+        month_name = calendar.month_name[month_number]
+        return month_name
+    except IndexError:
+        return "Invalid month number"
+
 
 def sort_files(source_path, destination_path):
     # Create destination directory if it doesn't exist
@@ -8,7 +20,8 @@ def sort_files(source_path, destination_path):
         os.makedirs(destination_path)
 
     # Get a list of files in the source directory
-    files = [f for f in os.listdir(source_path) if os.path.isfile(os.path.join(source_path, f))]
+    files = [f for f in os.listdir(source_path) if os.path.isfile(
+        os.path.join(source_path, f))]
 
     for file in files:
         source_file_path = os.path.join(source_path, file)
@@ -21,7 +34,8 @@ def sort_files(source_path, destination_path):
         # Create destination directories based on extension, year, and month
         extension_path = os.path.join(destination_path, file_extension[1:])
         year_path = os.path.join(extension_path, str(creation_date.year))
-        month_path = os.path.join(year_path, str(creation_date.month))
+        month_path = os.path.join(year_path, str(
+            get_month_name(creation_date.month)))
 
         # Create directories if they don't exist
         os.makedirs(extension_path, exist_ok=True)
@@ -35,6 +49,7 @@ def sort_files(source_path, destination_path):
         shutil.move(source_file_path, destination_file_path)
 
         print(f"Moved: {source_file_path} -> {destination_file_path}")
+
 
 if __name__ == "__main__":
     source_directory = input("Enter the source directory path: ")
