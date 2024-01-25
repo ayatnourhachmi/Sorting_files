@@ -1,4 +1,3 @@
-```markdown
 # File Sorting Utility
 
 This Python script is a versatile utility designed to organize and sort files within a specified directory. It categorizes files based on their extension, creation year, and creation month, providing a hierarchical and organized structure.
