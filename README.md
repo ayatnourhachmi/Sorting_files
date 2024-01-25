@@ -1,3 +1,4 @@
+```markdown
 # File Sorting Utility
 
 This Python script is a versatile utility designed to organize and sort files within a specified directory. It categorizes files based on their extension, creation year, and creation month, providing a hierarchical and organized structure.
@@ -21,14 +22,11 @@ This Python script is a versatile utility designed to organize and sort files wi
    cd file-sorting-utility
    ```
 
-2. **Run the Script:**
-   ```bash
-   python sort_files.py
-   ```
+2. **Copy the Batch Script:**
+   - Copy the batch file (`sort_files.bat`) to the folder where you want to sort files.
 
-3. **Follow the On-Screen Prompts:**
-   - Enter the source directory containing unorganized files.
-   - Enter the destination directory where sorted files will be placed.
+3. **Run the Batch Script:**
+   - Double-click the batch file to run the script.
 
 4. **View the Results:**
    - Check the destination directory for the organized files.
@@ -51,4 +49,4 @@ This Python script is a versatile utility designed to organize and sort files wi
 
 ## License
 
-This project is licensed under the MIT License - see the [](LICENSE.txt) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
