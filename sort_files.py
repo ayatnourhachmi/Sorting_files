@@ -1,11 +1,10 @@
 import os
+import sys
 import shutil
 import calendar
 from datetime import datetime
 
 # convert the numeric month obtained from the file creation date into its corresponding English name.
-
-
 def get_month_name(month_number):
     try:
         month_name = calendar.month_name[month_number]
@@ -52,7 +51,11 @@ def sort_files(source_path, destination_path):
 
 
 if __name__ == "__main__":
-    source_directory = input("Enter the source directory path: ")
-    destination_directory = input("Enter the destination directory path: ")
+    if len(sys.argv) != 3:
+        print("Usage: python sort_files.py source_directory destination_directory")
+        sys.exit(1)
+
+    source_directory = sys.argv[1]
+    destination_directory = sys.argv[2]
 
     sort_files(source_directory, destination_directory)
