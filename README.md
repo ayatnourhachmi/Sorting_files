@@ -22,13 +22,13 @@ This Python script is a versatile utility designed to organize and sort files wi
    ```
 
 2. **Copy the Batch Script:**
-   - Copy the batch file (`sort_files.bat`) to the folder where you want to sort files.
+   - Copy the batch file (`sort_files.bat`) and the Python script (`sort_files.py`) to the folder where you want to sort files.
 
 3. **Run the Batch Script:**
    - Double-click the batch file to run the script.
 
 4. **View the Results:**
-   - Check the destination directory for the organized files.
+   - The files will be organized in the same directory where the batch script was executed.
 
 ## Requirements
 
